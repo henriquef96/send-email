@@ -1,3 +1,5 @@
+<?php
+
 // Importação biblioteca PHPMailer
 require './libs/PHPMailer/Exception.php';
 require './libs/PHPMailer/OAuthTokenProvider.php';
@@ -52,12 +54,12 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'a.henriquefarias96@gmail.com';
-    $mail->Password = 'bhwa vtwu gtdo zyxb';
+    $mail->Username = 'seuemail@gmail.com'; //e-mail de saída
+    $mail->Password = '**** **** ****';
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
-    $mail->setFrom('a.henriquefarias96@gmail.com');
+    $mail->setFrom('seuemail@gmail.com');
     $mail->addAddress($mensagem->__get('para'));
 
     $mail->CharSet = 'UTF-8';
@@ -72,5 +74,3 @@ try {
     $mensagem->status['codigo_status'] = 2;
     $mensagem->status['descricao_status'] = 'Não foi possível enviar este e-mail! Por favor tente novamente mais tarde. Detalhes do erro: ' . $mail->ErrorInfo;
 }
-
-?>

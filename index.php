@@ -75,7 +75,7 @@
                 <p class="lead">Seu app de envio de e-mails particular!</p>
             </div>
 
-            <form action="processa_envio.php" method="post">
+            <form action="envio.php" method="post">
                 <div class="form-group">
                     <label for="para">Para</label>
                     <input name="para" type="text" class="form-control shadow-sm" id="para" placeholder="usuario@dominio.com.br">
